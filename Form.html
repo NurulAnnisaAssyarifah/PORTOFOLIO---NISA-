@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir RWD Nisa</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Formulir Request Project</legend><br>
+        <br> 
+
+        <label for="Nama">Masukkan Nama</label>
+        <input autofocus type="text" name="Nama" id="Nama" required placeholder="Masukkan Nama Anda"></br>
+        <br>
+        
+        <label for="email">Masukkan Email</label>
+        <input autofocus type="email" name="email" id="email" required placeholder="Masukkan Email Anda"><br>
+        <br>
+
+        <label for="Number">Masukkan Nomor Handphone</label>
+        <input autofocus type="text" name="Number" id="Number" required placeholder="Masukkan No Handphone Anda"><br>
+        <br>
+
+        <label for="gender">Jenis Kelamin</label>
+        <input type="radio" name="gender" id="Laki-laki"><label for="male">male</label>
+        <input type="radio" name="gender" id="Perempuan"><label for="female">female</label><br>
+        <br>
+
+        <label for="Jenis Website">Jenis Website</label>
+        <select name="" id="Jenis Website">
+            <option value="">Portofolio     </option>
+            <option value="">Artikel        </option>
+            <option value="">Blog           </option>
+            <option value="">Company Profile</option>
+            <option value="">Lainnya        </option>
+        </select><br>
+        <br>
+
+        <label for="pesan">Deskripsi Proyek :</label>
+        <textarea id="pesan" name="pesan" rows="5" placeholder="Jelaskan proyek yang sesuai dengan kebutuhan dan keinginan Anda..." required></textarea><br>
+        <br>
+
+        <label for="pembayaran">Jenis Pembayaran</label>
+        <label><input type="radio" name="pembayaran" value="transfer-bank"> Transfer Bank (BRI / BCA)</label><br>
+        <label><input type="radio" name="pembayaran" value="ewallet"> E-Wallet (Dana, OVO, Gopay, ShopeePay)</label><br>
+        <label><input type="radio" name="pembayaran" value="cash"> Pembayaran Tunai (Cash)</label>
+        <br>
+
+        <button type="submit" class="submit-btn">Pesan Website Sekarang</button>
+        </fieldset>
+
+    <footer>
+        &copy; Copyright <a href="http://itpln.ac.id" target="_blank" rel="noopener noreferrer">Institut Teknologi PLN</a> 2025
+    </footer>
+</body>
+</html>

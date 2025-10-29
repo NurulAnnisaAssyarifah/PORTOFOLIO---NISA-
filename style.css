@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", "Montserrat";
+  background: linear-gradient(135deg, #fff0f5, #ffe4e1, #ffd9dc);
+}
+
+header {
+  background: linear-gradient(90deg, #ffe4e1, #ffd9dc, #fff0f5);
+  width: 100%;
+  padding: 15px 0;
+  margin: 0;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  margin-right: 40px;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff69b4;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.Aku {
+  text-align: center;
+  padding: 20px 20px 10px;
+  color: black;
+  position: relative;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.Aku h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Aku h2 {
+  text-align: center;
+}
+
+.Aku-img {
+  width: 50vw;
+  height: 50vw;
+  max-width: 200px;
+  max-height: 200px;
+  border: 5px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+  display: block;
+  margin: 0 auto;
+}
+
+.Nisa-card {
+  background: linear-gradient(135deg, #ffe4e1, #ffd9dc, #fff0f5);
+  border-radius: 15px;
+  padding: 25px;
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto 0;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Nisa-card h2 {
+  font-size: 26px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #e75480;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.6);
+}
+
+.Nisa-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: black;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.Nisa {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffe4e1, #ffd9dc, #fff0f5);
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin: 10px auto 15px;
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.4);
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.card h3 {
+  text-align: center;
+  color: black;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.card p {
+  color: black;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #ffe4e1, #ffd9dc, #fff0f5);
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin: 25px auto;
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.4);
+  width: 90%;
+  max-width: 700px;
+}
+
+.skill-item {
+  margin-bottom: 18px;
+}
+
+.skill-item span {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  gap: 8px;
+}
+
+.progress-bar {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.progress {
+  background: linear-gradient(90deg, #ffd9dc, #ffb6c1);
+  height: 100%;
+  border-radius: 10px;
+  animation: fillBar 2s ease-in-out;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+    background-color: white;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px;
+  font-size: 14px;
+}
+
+th {
+  background: linear-gradient(135deg, #ffe4e1, #ffd9dc, #fff0f5);
+  color: black;
+}
+
+fieldset {
+  background-color: white;
+  border: 2px solid rgb(239, 165, 178);
+  border-radius: 15px;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+  box-sizing: border-box;
+}
+
+legend {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+textarea {
+  font-size: 14px;
+  min-height: 100px;
+  resize: vertical;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #ffe4e1, #ffd9dc, #fff0f5);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #ffd9dc, #ffb6c1, #ffe4e1);
+  transform: scale(1.02);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(90deg, #ffe4e1, #ffd9dc, #fff0f5);
+  color: white;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 15px;
+  border-top: 3px solid rgba(255, 182, 193, 0.6);
+  box-shadow: 0 -3px 8px rgba(255, 182, 193, 0.4);
+  margin-top: 60px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
