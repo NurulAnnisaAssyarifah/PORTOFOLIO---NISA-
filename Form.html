@@ -49,6 +49,7 @@
 
       <button type="submit" class="submit-btn">Pesan Website Sekarang</button>
       <br>
+      <div id="bubbleText" class="bubble">Terima kasih sudah memesan jasa kami!</div>
     </fieldset>
 </form>
 
@@ -57,20 +58,28 @@
   </footer>
 
   <script>
-    const form = document.getElementById("formPesan");
-    const pesan = document.getElementById("pesan-terima-kasih");
+  const form = document.getElementById("formPesan");
+  const bubbleText = document.getElementById("bubbleText");
 
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      if (form.checkValidity()) {
-        pesan.style.display = "block";
-        form.reset();
-      } else {
-        form.reportValidity();
-      }
-    });
-  </script>
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    if (form.checkValidity()) {
+
+      bubbleText.classList.add("show");
+
+      form.reset();
+
+      setTimeout(() => {
+        bubbleText.classList.remove("show");
+      }, 3000);
+    } else {
+      form.reportValidity();
+    }
+  });
+</script>
 </body>
 </html>
+
 
 
