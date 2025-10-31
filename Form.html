@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir RWD Nisa</title>
-    <link rel="stylesheet" href = "style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir RWD Nisa</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<form id="formPesan">
     <fieldset>
-        <legend>Formulir Request Project</legend><br>
-        <br> 
+      <legend>Formulir Request Project</legend>
 
-        <label for="Nama">Masukkan Nama</label>
-        <input autofocus type="text" name="Nama" id="Nama" required placeholder="Masukkan Nama Anda"></br>
-        <br>
-        
-        <label for="email">Masukkan Email</label>
-        <input autofocus type="email" name="email" id="email" required placeholder="Masukkan Email Anda"><br>
-        <br>
+      <label for="Nama">Masukkan Nama</label>
+      <input type="text" name="Nama" id="Nama" placeholder="Masukkan Nama Anda" required>
 
-        <label for="Number">Masukkan Nomor Handphone</label>
-        <input autofocus type="text" name="Number" id="Number" required placeholder="Masukkan No Handphone Anda"><br>
-        <br>
+      <label for="email">Masukkan Email</label>
+      <input type="email" name="email" id="email" placeholder="Masukkan Email Anda" required>
 
-        <label for="gender">Jenis Kelamin</label>
-        <input type="radio" name="gender" id="Laki-laki"><label for="male">male</label>
-        <input type="radio" name="gender" id="Perempuan"><label for="female">female</label><br>
-        <br>
+      <label for="Number">Masukkan Nomor Handphone</label>
+      <input type="text" name="Number" id="Number" placeholder="Masukkan No Handphone Anda" required>
 
-        <label for="Jenis Website">Jenis Website</label>
-        <select name="" id="Jenis Website">
-            <option value="">Portofolio     </option>
-            <option value="">Artikel        </option>
-            <option value="">Blog           </option>
-            <option value="">Company Profile</option>
-            <option value="">Lainnya        </option>
-        </select><br>
-        <br>
+      <p>Jenis Kelamin</p>
+      <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+      <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+      <br>
 
-        <label for="pesan">Deskripsi Proyek :</label>
-        <textarea id="pesan" name="pesan" rows="5" placeholder="Jelaskan proyek yang sesuai dengan kebutuhan dan keinginan Anda..." required></textarea><br>
-        <br>
+      <label for="JenisWebsite">Jenis Website</label>
+      <select name="JenisWebsite" id="JenisWebsite" required>
+        <option value="">-- Pilih Jenis Website --</option>
+        <option value="Portofolio">Portofolio</option>
+        <option value="Artikel">Artikel</option>
+        <option value="Blog">Blog</option>
+        <option value="CompanyProfile">Company Profile</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
 
-        <label for="pembayaran">Jenis Pembayaran</label>
-        <label><input type="radio" name="pembayaran" value="transfer-bank"> Transfer Bank (BRI / BCA)</label><br>
-        <label><input type="radio" name="pembayaran" value="ewallet"> E-Wallet (Dana, OVO, Gopay, ShopeePay)</label><br>
-        <label><input type="radio" name="pembayaran" value="cash"> Pembayaran Tunai (Cash)</label>
-        <br>
+      <label for="pesan">Deskripsi Proyek :</label>
+      <textarea id="pesan" name="pesan" placeholder="Jelaskan proyek yang sesuai dengan kebutuhan dan keinginan Anda..." required></textarea>
 
-        <button type="submit" class="submit-btn">Pesan Website Sekarang</button>
-        </fieldset>
+      <p>Jenis Pembayaran</p>
+      <label><input type="radio" name="pembayaran" value="transfer-bank" required> Transfer Bank (BRI / BCA)</label>
+      <label><input type="radio" name="pembayaran" value="ewallet"> E-Wallet (Dana, OVO, Gopay, ShopeePay)</label>
+      <label><input type="radio" name="pembayaran" value="cash"> Pembayaran Tunai (Cash)</label>
+      <br>
 
-    <footer>
-        &copy; Copyright <a href="http://itpln.ac.id" target="_blank" rel="noopener noreferrer">Institut Teknologi PLN</a> 2025
-    </footer>
+      <label><input type="checkbox" required> Saya setuju dengan ketentuan.</label>
+      <br>
+
+      <button type="submit" class="submit-btn">Pesan Website Sekarang</button>
+      <br>
+      <p id="pesan-terima-kasih">Terima kasih sudah memesan jasa kami!</p>
+    </fieldset>
+</form>
+
+  <footer>
+    &copy; Copyright <a href="http://itpln.ac.id" target="_blank" rel="noopener noreferrer">Institut Teknologi PLN</a> 2025
+  </footer>
+
+  <script>
+    const form = document.getElementById("formPesan");
+    const pesan = document.getElementById("pesan-terima-kasih");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (form.checkValidity()) {
+        pesan.style.display = "block";
+        form.reset();
+      } else {
+        form.reportValidity();
+      }
+    });
+  </script>
+
 </body>
 </html>
